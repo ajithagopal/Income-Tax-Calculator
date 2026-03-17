@@ -1,0 +1,617 @@
+
+/* Template for Local, Not for Production */
+img.header-footer {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.container-ads {
+    width: 325px;
+}
+
+
+
+
+/* Style for Income tax calculator */
+
+h1.it-page-title, h2.it-page-title {
+    color: #1E78C1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+p.it-page-para {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+p.it-page-para a {
+    color: #C00;
+}
+
+.income-tax-calc-container {
+    width: 100%;
+    max-width: 975px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.income-tax-calc-tabs *,
+.income-tax-calc-tabscontents * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.income-tax-calc-tabs {
+    position: relative;
+    padding-right: 0;
+    border-right: 0px solid #dddddd;
+    width: 350px;
+}
+
+/* .income-tax-calc-tabs::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: calc(100% - 32px);
+    border-right: 1px dashed #c7c7c7;
+    top: 4px;
+    left: 28px;
+    z-index: 0;
+} */
+
+.income-tax-calc-tab-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 24px;
+    z-index: 1;
+    position: relative;
+}
+
+.it-calc-tab-item-count {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+}
+
+.it-calc-tab-item-count.it-calc-tab-item-count-gray {
+    border-color: rgba(0,0,0,0.25);
+}
+
+.it-calc-tab-item-label-title {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.it-calc-tab-item-label-desc {
+    font-size: 12px;
+    font-weight: 300;
+    display: none;
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-current .it-calc-tab-item-count {
+    background: #1E78C1;
+    border: 1px solid #1E78C1;
+    color: #FFFFFF
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-current#income-tax-calc-tab-3 .it-calc-tab-item-count {
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.25);
+    color: #000000
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-current .it-calc-tab-item-label-title {
+    font-weight: 500;
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-completed .it-calc-tab-item-count {
+    background: #dfffe4;
+    border: 1px solid rgba(0,164,22,0.3);
+    color: rgba(0,164,22,1)
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-completed .it-calc-tab-item-label-desc {
+    color: rgba(0,164,22,1);
+    font-weight: 400;
+    display: block;
+}
+
+.income-tax-calc-tab-item.income-tax-calc-tab-completed svg {
+    display: none;
+}
+
+.income-tax-calc-tabscontents {
+    padding-left: 24px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.income-tax-calc-fieldset {
+    margin-bottom: 24px;
+}
+
+.income-tax-calc-fieldset * {
+    font-family: 'Roboto', sans-serif;
+}
+
+.income-tax-calc-fieldset label {
+    font-weight: 500;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.income-tax-calc-fieldset select {
+    font-family: 'Roboto', sans-serif;
+    margin: 8px 0;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.it-calc-radio-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.it-calc-radio-container input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.it-calc-radio-container label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 10.5px 12px;
+    margin: 0 16px 16px 0;
+    background: #f1f1f1;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    color: #000000;
+}
+
+.it-calc-radio-container input:checked + label {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+}
+
+button.it-btn {
+    outline: 0;
+    padding: 8px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button.it-btn.it-btn-next {
+    background: #1E78C1;
+    border: 1px solid #1E78C1;
+    color: #FFFFFF;
+}
+
+button.it-btn.it-btn-calc {
+    background: rgba(0,164,22,1);
+    border: 1px solid rgba(0,164,22,1);
+    color: #FFFFFF;
+}
+
+.it-rupee-input-field {
+    margin: 8px 0;
+    position: relative;
+}
+
+.it-rupee-input-field input {
+    outline: 0;
+    padding: 8px 8px 8px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.it-rupee-input-field span {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.it-rupee-input-field.error-it-field input {
+    border-color: rgb(255 0 0)
+}
+
+label.error-it-field-label {
+    color: rgb(255 0 0);
+}
+
+#oldRegimeChart, #newRegimeChart {
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+.income-tax-calc-tabscontent-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.income-tax-calc-tabscontent-flex .income-tax-calc-fieldset {
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+.it-calc-total-text {
+    padding: 15px 0;
+    margin-bottom: 24px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.it-calc-total-text div {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.it-calc-total-text div::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 50%;
+    background: #000000;
+    margin-right: 4px;
+}
+
+.old-regime-results .it-calc-total-text div.set1::before {
+    background: #ff0000;
+}
+
+.old-regime-results .it-calc-total-text div.set2::before {
+    background: #ffb000;
+}
+
+.old-regime-results .it-calc-total-text div.set3::before {
+    background: #acff00;
+}
+
+.old-regime-results .it-calc-total-text div.set4::before {
+    background: #02e399;
+}
+
+.old-regime-results .it-calc-total-text div.set5::before {
+    background: #00b5ff;
+}
+
+.old-regime-results .it-calc-total-text div.set6::before {
+    background: #3600ff;
+}
+
+.old-regime-results .it-calc-total-text div.set7::before {
+    background: #ff00e2;
+}
+
+
+
+.new-regime-results .it-calc-total-text div.set1::before {
+    background: #9c1b1b;
+}
+
+.new-regime-results .it-calc-total-text div.set7::before {
+    background: #ffb000;
+}
+
+.new-regime-results .it-calc-total-text div.set2::before {
+    background: #946918;
+}
+
+.new-regime-results .it-calc-total-text div.set3::before {
+    background: #73921f;
+}
+
+.new-regime-results .it-calc-total-text div.set4::before {
+    background: #25a27f;
+}
+
+.new-regime-results .it-calc-total-text div.set5::before {
+    background: #2a4999;
+}
+
+.new-regime-results .it-calc-total-text div.set6::before {
+    background: #8c2ea4;
+}
+
+
+
+.income-tax-calc-fieldset .it-calc-total-text {
+    border-top-width: 0;
+}
+
+.income-tax-calc-fieldset .it-calc-total-text span {
+    font-weight: 500;
+    font-size: 16px;
+}
+.income-tax-calc-fieldset .it-calc-total-text span:first-child {
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.income-tax-calc-tabscontent-results .income-tax-calc-fieldset {
+    width: calc(50% - 24px);
+}
+
+.income-tax-calc-tabscontent .deductions-section {
+    display: none;
+    transition: 0.5s ease-in-out;
+    transform: translateY(110%);
+    -moz-transform: translateY(110%);
+    -webkit-transform: translateY(110%);
+}
+
+.income-tax-calc-tabscontent .deductions-section.showNow {
+    transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+}
+
+.income-tax-calc-tabscontent .deductions-section.hideNow {
+    transform: translateY(-110%);
+    -moz-transform: translateY(-110%);
+    -webkit-transform: translateY(-110%);
+}
+
+.income-tax-calc-fieldset .it-calc-total-text {
+    padding: 0px;
+    margin-bottom: 0;
+}
+
+#incomeTaxResultsChart {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.bl-hz-tabs {
+    display: flex;
+    justify-content: left;
+}
+
+.bl-hz-tabs a {
+    text-decoration: none;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 8px 16px;
+    display: inline-block;
+    color: #787878;
+    margin: 0;
+    position: relative;
+    border: none;
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+.bl-hz-tabs a.active {
+    color: #000000;
+    border: none;
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+/* tab-circle-progress */
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.it-calc-tab-item-count svg {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+}
+
+.old-regime-results,
+.new-regime-results {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+div[data-acc-content] { 
+    display: none;
+    padding: 0 16px 16px 16px;
+    background-color: #f9f9f9;
+}
+
+div[data-acc-content].setMaxHeight {
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+div[data-acc-step] {
+    padding: 0;
+}
+
+div[data-acc-step]:not(.open) {
+    background: #FFFFFF;
+}
+
+div[data-acc-step] h5 {
+    padding: 16px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #1E78C1;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div[data-acc-step]:not(.open) h5 { 
+    font-weight: 400;
+    color: #1E78C1;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+div[data-acc-step] h5::after {
+    content: '';
+    background: url('images/collapse.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    transform: rotate(180deg);
+}
+
+div[data-acc-step]:not(.open) h5::after {
+    transform: rotate(90deg);
+}
+
+div[data-acc-content] h3 {
+    color: #1E78C1;
+    font-weight: 400;
+}
+
+ol.it-page-ol {
+    padding-left: 0;
+}
+
+span.it-page-space {
+    display: block;
+    padding: 8px;
+}
+
+table.it-page-table, table.it-page-table td, table.it-page-table th {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 8px 16px;
+    vertical-align: middle;
+}
+
+table.it-page-table th {
+    font-weight: 500;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .old-regime-results, .new-regime-results {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .income-tax-calc-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .income-tax-calc-tabs *, .income-tax-calc-tabscontents * {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .income-tax-calc-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bl-hz-tabs {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width:570px) {
+    table.it-page-table{
+        padding: 0 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #F2F2F2;
+        display: block;
+        overflow: auto;
+        width: 100%;
+        position: unset;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
+
+.it-page-ol-child li{
+    padding: 5px 0;
+}
+
+.outer-table{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .outer-table{
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .outer-table{
+        flex-direction: column !important; 
+    }
+}
