@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hindu businessline</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/menu.css">
+	<link rel="stylesheet" href="./assets/css/section.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <script>
+        if($( window ).width() < 600){
+            $(window).scroll(function() {
+                if ($(this).scrollTop()>300) {
+                    $(".footer-mobile-ad").slideDown();
+                }
+                if ($(this).scrollTop()<300) {
+                    $(".footer-mobile-ad").slideUp();
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+	<div data-include="top-ad"></div>
+
+    <div data-include="top-bar"></div>
+
+    <div class="header-bar" data-include="header"></div>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12">
+                    
+                    <h1 class="it-page-title">Income Tax Calculator 2026-2027</h1>
+                    <p  class="it-page-para">Individual taxpayers are currently facing confusion regarding the choice between the old and new tax regimes, which were introduced in the <a href="https://www.thehindubusinessline.com/economy/budget/">Union Budget 2026</a>. While the new regime offers lower slab rates, it requires taxpayers to forego most of the deductions and exemptions available under the old regime. Therefore, in order to make an informed decision, taxpayers must carefully examine both the existing and new tax regimes. To estimate their income tax payable under each regime, they can utilize the new income tax calculator for FY 2026-27, which is user-friendly and can provide results in just a few simple steps.</p>
+                    <div class="element  hide-system mobile-bottomborder-none">
+                        <p class="advertise-para">ADVERTISEMENT</p>
+                        <div class="picture ad">
+                            <a href="#_"><img src="./assets/images/ad/ad-300X250.png"></a>
+                        </div>
+                    </div>
+                    <span class="it-page-space"></span>
+                    <span class="it-page-space"></span>
+                    <div class="income-tax-calc-container">
+                        <div class="income-tax-calc-tabs">
+                          <form id="form">
+                  
+                            <div class="list-group">
+                  
+                              <div class="list-group-item" data-acc-step>
+                                <h5 class="mb-0 data-acc-title" data-index="0" data-acc-title>Basic Details</h5>
+                                <div class="data-acc-content" data-acc-content>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Financial Year</label>
+                                    <select name="finYear" tabindex="1" >
+                                      <!-- <option value="2021">2021 - 22</option>
+                                      <option value="2022">2022 - 23</option>
+                                      <option value="2023">2023 - 24</option> -->
+                                      <option value="" disabled selected>Please select the year</option>
+                                      <option value="2026">2026 - 27</option>
+                                      <option value="2025">2025 - 26</option>
+                                      <option value="2024">2024 - 25</option>                                                                      
+                                    </select>
+                                  </div>
+              
+                                  <div class="income-tax-calc-fieldset">
+                                    <label class="name-age">Age</label>
+                                    <div class="it-calc-radio-container">
+                                      <input type="radio" name="age" id="age60" value="1" />
+                                      <label for="age60" tabindex="2">Below 60</label>
+                      
+                                      <input type="radio" name="age" id="age6080" value="2" />
+                                      <label for="age6080" tabindex="3">Above 60 and Below 80</label>
+                      
+                                      <input type="radio" name="age" id="age80" value="3" />
+                                      <label for="age80" tabindex="4">Above 80</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                  
+                              <div class="list-group-item" data-acc-step>
+                                <h5 class="mb-0 data-acc-title" data-index="1" data-acc-title>Income Details</h5>
+                                <div class="data-acc-content" data-acc-content>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Gross income from salary</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="grossIncome" id="grossIncome" tabindex="5" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Income from interest</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="incomeFromInterest" id="incomeFromInterest" tabindex="6" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Rental income</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="rentalIncome" id="rentalIncome" tabindex="7" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Other income</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="otherIncome" id="otherIncome" tabindex="9" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <div class="list-group-item" data-acc-step>
+                                <h5 class="mb-0 data-acc-title" data-index="2" data-acc-title>Deductions</h5>
+                                <div class="data-acc-content setMaxHeight" data-acc-content>
+                                  <h3>Under 80C</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Life insurance Premium</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="lifeInsurancePremium" id="lifeInsurancePremium" tabindex="10" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Public provident fund</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="publicProvidentFund" id="publicProvidentFund" tabindex="11" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Contribution to Provident Fund</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="contributionProvidentFund" id="contributionProvidentFund" tabindex="12" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Fixed Deposit</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="fixedDeposit" id="fixedDeposit" tabindex="13" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>ELSS</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="ELSS" id="ELSS" tabindex="14" />
+                                    </div>
+                                  </div>
+                    
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>ULIP/tax saving investment scheme</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="taxSavingInvestmentScheme" id="taxSavingInvestmentScheme" tabindex="15" />
+                                    </div>
+                                  </div>
+                    
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Other saving Schemes</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="otherSavingSchemes" id="otherSavingSchemes" tabindex="16"/>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Home loan Principal</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="homeLoanPrincipal" id="homeLoanPrincipal" tabindex="17"/>
+                                    </div>
+                                  </div>
+              
+                                  <h3>Under 80D</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>For Self & Family</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="forSelfFamily" id="forSelfFamily" tabindex="18" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Preventive Checkup</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="preventiveCheckup" id="preventiveCheckup" tabindex="19"/>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>For Parents below 60 Years</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="forParentsBelow60Years" id="forParentsBelow60Years" class="eitherInputbox" data-target="forParentsAbove60Years" tabindex="20" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>For Parents above 60 Years</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="forParentsAbove60Years" id="forParentsAbove60Years" class="eitherInputbox" data-target="forParentsBelow60Years" tabindex="21"/>
+                                    </div>
+                                  </div>
+              
+                                  <h3>Under 80E</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Educational Loan 80E</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="educationalLoan80E" id="educationalLoan80E" tabindex="22"/>
+                                    </div>
+                                  </div>
+              
+                                  <h3>Under 24B</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Interest on housing loan for self occupied</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="interestHousingLoanSelfOccupied" id="interestHousingLoanSelfOccupied" tabindex="23"/>
+                                    </div>
+                                  </div>
+              
+                                  <h3>Under 80EEA</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Affordable house</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="affordableHouse" id="affordableHouse" tabindex="24"/>
+                                    </div>
+                                  </div>
+              
+                                  <h3>Other deductions</h3>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Donation 80G</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="donation80G" id="donation80G" tabindex="25"/>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>HRA Exemption (HRA u/s 10 (13A))</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="HRAExemption" id="HRAExemption" tabindex="26"/>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Other deduction</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="otherDeduction" id="otherDeduction" tabindex="27"/>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Standard deduction(Non-editable)</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="standardDeduction" id="standardDeduction" value="50,000" tabindex="28" readonly/>
+                                    </div>
+                                  </div>
+              
+              
+              
+              
+              
+                                </div>
+                              </div>
+              
+                              <div class="list-group-item" data-acc-step>
+                                <h5 class="mb-0 data-acc-title" data-index="3" data-acc-title>Tax Paid</h5>
+                                <div class="data-acc-content" data-acc-content>
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>TDS</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="tds" id="tds" tabindex="29" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Advance Tax</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="advanceTax" id="advanceTax" tabindex="30" />
+                                    </div>
+                                  </div>
+                      
+                                  <div class="income-tax-calc-fieldset">
+                                    <label>Self-Assessment Tax</label>
+                                    <div class="it-rupee-input-field">
+                                      <span>₹</span>
+                                      <input type="text" name="selfAssessmentTax" id="selfAssessmentTax" tabindex="31" />
+                                    </div>
+                                  </div>
+                                  <a href="#" class="btn btn-primary float-right itFormSubmitBtn">Submit</a>
+                                </div>
+                              </div>
+                  
+                            </div>
+                  
+                          </form>
+                        </div>
+              
+                        <div class="income-tax-calc-tabscontents">
+                          <div class="bl-hz-tabs">
+                            <a href="javascript:void(0)" class="active" data-value="old">Old Regime</a>
+                          </div>
+                          <div class="old-regime-results" style="width: 100%; margin: 0 auto;">
+                            <canvas id="oldRegimeChart" width="200" height="200"></canvas>
+                            <div class="income-tax-calc-tabscontent-flex income-tax-calc-tabscontent-results"> 
+                              
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set1">Gross Income</div>
+                                  <span>₹</span> <span class="it-calc-total grossIncomeTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set2">Standard deduction</div>
+                                  <span>₹</span> <span class="it-calc-total standardDeductionTxt">0</span>
+                                </div>
+                              </div>
+              
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set3">Total deduction</div>
+                                  <span>₹</span> <span class="it-calc-total totalDeductionTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set4">Taxable income</div>
+                                  <span>₹</span> <span class="it-calc-total taxableIncomeTxt">0</span>
+                                </div>
+                              </div>
+                  
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set5">Tax payable</div>
+                                  <span>₹</span> <span class="it-calc-total taxPayableTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set6">Tax already paid</div>
+                                  <span>₹</span> <span class="it-calc-total taxAlreadyPaidTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set7">Net tax payable</div>
+                                  <span>₹</span> <span class="it-calc-total netTaxPayableTxt">0</span>
+                                </div>
+                              </div>
+                
+                            </div>
+                          </div>
+              
+                          <div style="margin: 50px 0;"></div>
+              
+                          <div class="bl-hz-tabs">
+                            <a href="javascript:void(0)" class="active" data-value="new">New Regime</a>
+                          </div>
+                          <div class="new-regime-results" style="width: 100%;margin: 0 auto;">
+                            <canvas id="newRegimeChart" width="200" height="200"></canvas>
+                            <div class="income-tax-calc-tabscontent-flex income-tax-calc-tabscontent-results"> 
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set1">Gross Income</div>
+                                  <span>₹</span> <span class="it-calc-total grossIncomeTxt">0</span>
+                                </div>
+                              </div>
+              
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set7">Standard deduction</div>
+                                  <span>₹</span> <span class="it-calc-total standardDeductionTxt">0</span>
+                                </div>
+                              </div>
+                              <!--
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set2">Total deduction</div>
+                                  <span>₹</span> <span class="it-calc-total totalDeductionTxt">0</span>
+                                </div>
+                              </div>
+                              -->
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set3">Taxable income</div>
+                                  <span>₹</span> <span class="it-calc-total taxableIncomeTxt">0</span>
+                                </div>
+                              </div>
+                  
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set4">Tax payable</div>
+                                  <span>₹</span> <span class="it-calc-total taxPayableTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set5">Tax already paid</div>
+                                  <span>₹</span> <span class="it-calc-total taxAlreadyPaidTxt">0</span>
+                                </div>
+                              </div>
+                
+                              <div class="income-tax-calc-fieldset">
+                                <div class="it-calc-total-text">
+                                  <div class="set6">Net tax payable</div>
+                                  <span>₹</span> <span class="it-calc-total netTaxPayableTxt">0</span>
+                                </div>
+                              </div>
+                
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+              
+                    
+                    <span class="it-page-space"></span>
+                    <div class="element  hide-system topborder mobile-topborder mobile-bottomborder-none">
+                        <p class="advertise-para">ADVERTISEMENT</p>
+                        <div class="picture ad">
+                            <a href="#_"><img src="./assets/images/ad/ad-300X250.png"></a>
+                        </div>
+                    </div>
+                    <p  class="it-page-para"><b>Disclaimer:</b> This income tax calculator provides estimates only and is for informational purposes. The calculations and results are estimates based on the data entered by the user and are not guaranteed to be accurate. For accurate tax advice, consult a qualified tax professional.</p>
+                    <span class="it-page-space"></span>
+                    <h2 class="it-page-title">How to Use Income Tax Calculator online for FY 2026-27 ?</h2>
+              
+                    <p  class="it-page-para">To use the online income tax calculator, follow these steps:</p>
+                    <ol start="1" class="it-page-ol-child">
+                        <li>Go to BusinessLine's website and access the income tax calculator.</li>
+                        <li>Choose the financial year you want to calculate taxes for (2024-25, 2025-26, 2026-27) and select your age range (regular individual, senior citizen, or super senior citizen), then click "Next."</li>
+                        <li>Enter your gross income from various sources (salary, interest, rental, other) and click "Next."</li>
+                        <li>Input your tax-saving investment details, such as deductions under Section 80C, HRA, medical insurance, NPS, and others, then click "Next" to proceed.</li>
+                        <li>Once all information is entered, the calculator will compute your taxes under both the old and new tax regimes.</li>
+                        <li>If you haven't reached the maximum limit for Section 80C deductions (Rs. 1.5 lakh), you can save taxes under that section by clicking the "View Plans" button</li>
+                    </ol>
+              
+                    <h2 class="it-page-title">Tax Brackets and Rates</h2>
+                    <p  class="it-page-para">In India, there are currently two Income Tax regimes, allowing individuals to choose between paying taxes under the new or old regime. The new regime offers lower tax rates for higher income groups. It's important to note that tax slab rates vary based on age, income group, and the chosen tax regime. To determine your tax liabilities, you can use an income tax calculator and consider all of these details. The new income tax slab rates differ from those of the old regime in the following ways:</p>
+              
+                    <span class="it-page-space"></span>
+                  <div class="outer-table">
+                                  
+                  <table class="it-page-table">
+                    <tbody>
+                      <tr>
+                          <th colspan="1" rowspan="1">
+                            <p class="it-page-para"><span><b>Net Taxable Income (Rs.)</b></span></p>
+                          </th>
+                          <th colspan="1" rowspan="1">
+                            <p class="it-page-para"><span><b>Old Tax Regime Slab Rate</b></span></p>
+                          </th>
+                          <!-- <th colspan="1" rowspan="1">
+                            <p class="it-page-para"><span><b>Proposed New Tax Regime Slab Rate</b></span></p>
+                          </th> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>0 - 2,50,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Exempt</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Exempt</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>2,50,001 - 3,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>5% over Rs. 2.5 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Exempt</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>3,00,001 - 5,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 2,500 + 5% over Rs. 3 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>5% over Rs. 3 lakh</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>5,00,001 - 7,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 12,500 + 20% over Rs. 5 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 10,000 + 5% over Rs. 5 lakh</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>7,00,001 - 10,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 52,500 + 20% over Rs. 7 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 20,000 + 10% over Rs. 7 lakh</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>10,00,001 - 12,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 1,12,500 + 30% over Rs. 10 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 50,000 + 15% over Rs. 10 lakh</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>12,00,001 - 15,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 1,72,500 + 30% over Rs. 12 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 80,000 + 20% over Rs. 12 lakh</span></p>
+                          </td> -->
+                      </tr>
+                      <tr>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Over 15,00,000</span></p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 2,62,500 + 30% over Rs. 15 lakh</span></p>
+                          </td>
+                          <!-- <td colspan="1" rowspan="1">
+                            <p class="it-page-para"><span>Rs. 1,40,000 + 30% over Rs. 15 lakh</span></p>
+                          </td> -->
+                      </tr>
+                    </tbody>
+                </table>
+                <table class="it-page-table">
+                  <tbody>
+                    <tr>
+                        <th colspan="2">
+                          <p  class="it-page-para"><span><b>Net Taxable Income (Rs.)</b></span></p>
+                        </th>
+                        <th rowspan="2">
+                          <p  class="it-page-para"><span><b>Proposed New Tax Regime Slab Rate</b></span></p>
+                        </th>
+                    </tr>
+
+                    <tr>
+                      <th>From</th>
+                      <th>To</th>
+                  </tr>
+                  <tr>
+                      <td>0</td>
+                      <td>400000</td>
+                      <td>Nil</td>
+                  </tr>
+                  <tr>
+                    <td>&gt; 400000</td>
+                    <td>800000</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>&gt; 800000</td>
+                    <td>1200000</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>&gt; 1200000</td>
+                    <td>1600000</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <td>&gt; 1600000</td>
+                    <td>2000000</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>&gt; 2000000</td>
+                    <td>2400000</td>
+                    <td>25%</td>
+                </tr>
+                <tr>
+                    <td>&gt; 2400000</td>
+                    <td>~</td>
+                    <td>30%</td>
+                </tr>
+                   
+                  </tbody>
+              </table>
+                  </div>
+                    <span class="it-page-space"></span>
+                    <p  class="it-page-para"><b>Note:</b>The slabs and rates of tax in the 'Proposed New Tax Regime Slab Rate' column apply to taxpayers of all ages.</p>
+              
+                    <span class="it-page-space"></span>
+              
+                    <p  class="it-page-para">The new income tax slab rates result in lower taxes for individuals with net taxable income ranging from Rs. 5 lakhs to Rs. 15 lakhs, which can reduce their tax burden.Income tax rates applicable for individuals aged between 60 and 80 years who are senior citizens.</p>
+                    <span class="it-page-space"></span>
+
+                    <!-- <p  class="it-page-para"><b>Senior citizens:</b> Individuals aged between 60 and 80 years</p>
+              
+                    <span class="it-page-space"></span>
+              
+                    <table class="it-page-table">
+                        <tbody>
+                           <tr>
+                              <th colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span><b>Net Taxable Income (Rs.)</b></span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span><b>New Tax Regime Slab Rate</b></span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span><b>Old Tax Regime Slab Rate</b></span></p>
+                              </th>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>0 - 3,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Exempt</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Exempt</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>3,00,001 - 5,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>5% over Rs. 3 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>5% above Rs. 3 lakh</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>5,00,001 - 7,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 10,000 + 5% over Rs. 5 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 10,000 + 20% over Rs. 5 lakh</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>7,00,001 - 10,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 20,000 + 10% over Rs. 7 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 50,000 + 20% over Rs. 7 lakh</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>10,00,001 - 12,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 50,000 + 15% over Rs. 10 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 110,000 + 30% over Rs. 10 lakh</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>12,00,001 - 15,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 80,000 + 20% over Rs. 12 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 1,70,000 + 30% over Rs. 12 lakh</span></p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Over 15,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 1,40,000 + 30% over Rs. 15 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                 <p  class="it-page-para"><span>Rs. 260,000 + 30% over Rs. 15 lakh</span></p>
+                              </td>
+                           </tr>
+                        </tbody>
+                    </table>
+              
+                    <span class="it-page-space"></span>
+              
+                    <p  class="it-page-para">Under the old tax regime, senior citizens are given a higher exemption limit of Rs. 3 lakh compared to the Rs. 2.5 lakh limit offered under the new tax regime. For super senior citizens above 80 years, the old tax regime offers a higher exemption limit of up to Rs. 5 lakh, while the new tax regime offers a flat income tax exemption limit of Rs. 2.5 lakh regardless of the age of the taxpayer.</p>
+<span class="it-page-space"></span>
+                    <p  class="it-page-para"><b>Super Seniors:</b> Senior citizens above 80 years</p>
+              
+                    <span class="it-page-space"></span>
+              
+                    <table class="it-page-table">
+                        <tbody>
+                          <tr>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span><b>Net Taxable Income (Rs.)</b></span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span><b>New Tax Regime Slab Rate</b></span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span><b>Old Tax Regime Slab Rate</b></span></p>
+                              </th>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>0 - 3,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Exempt</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Exempt</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>3,00,001 - 5,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>5% over Rs. 3 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Exempt</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>5,00,001 - 7,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 10,000 + 5% over Rs. 5 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>20% over Rs. 5 lakh</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>7,00,001 - 10,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 20,000 + 10% over Rs. 7 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 40,000 + 20% over Rs. 7 lakh</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>10,00,001 - 12,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 50,000 + 15% over Rs. 10 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 100,000 + 30% over Rs. 10 lakh</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>12,00,001 - 15,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 80,000 + 20% over Rs. 12 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 1,60,000 + 30% over Rs. 12 lakh</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Over 15,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 1,40,000 + 30% over Rs. 15 lakh</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Rs. 250,000 + 30% over Rs. 15 lakh</span></p>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+              
+                      <span class="it-page-space"></span> -->
+              
+                      <h2 class="it-page-title">How is income tax calculated?</h2>
+                      <p class="it-page-para">To calculate income tax as per the old income tax slab, you need to follow a few steps. Firstly, calculate your gross taxable income by subtracting your deductions such as HRA, LTA, and standard deduction from your gross salary and adding income from other sources. Secondly, calculate your total tax benefits by investing in tax-saving options such as ELSS and PPF available under section 80C of the Indian Income Tax. Thirdly, calculate your net taxable income by subtracting the total tax benefits from the gross taxable income. Lastly, calculate your total tax liability based on the tax rate applicable to your total taxable income. If your total taxable income is less than ₹5 lakhs, you will get a rebate of ₹12,500 under section 87A. For the new tax regime, deductions/exemptions such as HRA and LTA would be taxable, and you cannot avail tax benefits by investing in tax-saving instruments and other deductions.</p>
+              
+                      <span class="it-page-space"></span>
+              
+                      <table class="it-page-table">
+                        <tbody>
+                          <tr>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Nature</span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Amount<br/>(In one year)</span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Exemption/Deduction</span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Taxable Income<br/>(Old regime)</span></p>
+                              </th>
+                              <th colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Taxable Income<br/>(New regime)</span></p>
+                              </th>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Basic Salary</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>12,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>12,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>12,00,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>HRA</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>6,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>4,80,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>1,20,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>6,00,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Special allowance</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>2,40,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>NA</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>2,40,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>2,40,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>LTA</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>30,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>20,000(Billed)</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>10,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>30,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Gross Total Income from Salary</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>15,70,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>20,70,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Standard deduction</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>50,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>-50,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>-75,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Other sources of income</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>1,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>1,00,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>1,00,000</span></p>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>Gross Taxable Income</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p class="c3 c6"><span class="c2"></span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>16,20,000</span></p>
+                              </td>
+                              <td colspan="1" rowspan="1">
+                                <p  class="it-page-para"><span>20,95,000</span></p>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+              
+                      <span class="it-page-space"></span>
+                      <h2 class="it-page-title">Income Tax Calculator FAQs</h2>
+              
+                      <strong>1. How much tax do I have to pay on my salary?</strong>
+                      <p  class="it-page-para">Salary tax is calculated using your total taxable income after all deductions and exemptions, your income tax slab, and the tax regime you have chosen.</p>
+              
+                      <span class="it-page-space"></span>
+              
+                      <strong>2. What exactly is the distinction between an exemption and a deduction?</strong>
+                      <p  class="it-page-para">Exemptions are portions of your income that are exempt from taxation. Exemptions include, for example, a portion of your LTA (Leave Travel Allowance). Deductions, on the other hand, are expenses that aid in the reduction of taxable income. For example, you can claim your ELSS, NPS, and PPF investments as Section 80C deductions to reduce your net taxable income.</p>
+              
+                      <span class="it-page-space"></span>
+              
+                      <strong>3. Which deductions and exemptions are no longer available under the new tax system?</strong>
+                      <p  class="it-page-para">All deductions under Chapter VIA, such as 80C, 80CCC, 80CCD, 80D, 80DD, 80DDB, 80E, 80G, 80GG, 80GGA, 80GGC, are no longer available to taxpayers under the new tax regime. Furthermore, the deduction for interest on housing loans under section 24 as well as the deduction for family pension income are no longer available under the new tax regime.</p>
+                      <p  class="it-page-para">A statutory deduction of Rs.75,000 and exemption from allowances such as HRA and LTA are not permitted for salaried individuals.</p>
+              
+                      <span class="it-page-space"></span>
+              
+                      <strong>4. How do I compute my income tax?</strong>
+                      <p  class="it-page-para">The basic salary + HRA + Special Allowance + Transport Allowance + any other allowances make up the salary income. Some salary components, such as phone bill reimbursement, leave travel allowance, and so on, are tax-free. You can claim an HRA exemption if you rented a place and received HRA.</p>
+                      <p  class="it-page-para">Aside from these deductions, the budget 2018 introduced a standard deduction of Rs 40,000, which was later increased to Rs 50,000 in the budget 2019.</p>
+              
+                      <span class="it-page-space"></span>
+              
+                      <strong>5. What information do I need to submit while e-filing my ITR?</strong>
+                      <p  class="it-page-para">The following information is necessary throughout the e-filling process:</p>
+                      
+                      <ol start="1" class="it-page-ol-child">
+                        <li><span>PAN number, Adhar number, and address are examples of basic information.</span></li>
+                        <li><span>Income details from multiple sources, such as salary, residential property, or any other source.</span></li>
+                        <li><span>Evidence of payment of any advance tax or TDS (tax deducted at source) data</span></li>
+                        <li><span>Bank information kept in the fiscal year</span></li>
+                        <li><span>Details of Chapter VIA deductions to be claimed</span></li>
+                        <li><span>Learn more about ITR e-filing by clicking here.</span></li>
+                      </ol>
+                
+                    
+
+                </div>
+                <div class=" col-xl-3 col-lg-6 col-md-6 col-sm-5 col-12">
+                    <div class="element hide-mobile no-border pt-2">
+                        <div class="picture ad mt-0">
+                            <a href="#_"><img src="./assets/images/ad/ad-2.png" /></a>
+                        </div>
+                    </div>
+                    <div class="todays-poll">
+                        <div class="element">
+                                <div class="label"><a href="#_">Today's Poll</a></div>
+                                <div class="picture">
+                                    <a href="#_"><img src="./assets/images/ad/todays-pool.png" /></a>
+                                </div>
+                                <div class="title"><a href="#_">Are cryptocurrencies a threat to economic stability?</a></div>
+                                <div class="todays-poll-checkbox">
+                                    <input type="radio" id="poll-yes" name="poll-check-sys" value="Yes">
+                                    <label for="poll-yes">Yes</label>
+                                    <input type="radio" id="poll-no" name="poll-check-sys" value="No">
+                                    <label for="poll-no">No</label>
+                                    <input type="radio" id="poll-cantsay" name="poll-check-sys" value="cantsay">
+                                    <label for="poll-cantsay">I can't say</label>
+                                </div> 
+                                <div class="todays-poll-button">
+                                    <button type="button" class="btn btn-bl btn-bl-vote">VOTE NOW</button>
+                                </div>
+                        </div>
+                    </div> 
+                    <div class="element   topborder mobile-topborder mobile-bottomborder">
+                        <p class="advertise-para">ADVERTISEMENT</p>
+                        <div class="picture ad">
+                            <a href="#_"><img src="./assets/images/ad/ad-300X250.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="center-ad-long pt-3 pb-3">
+        <div class="container ">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="ad">
+                        <p>ADVERTISEMENT</p>
+                        <a href="#_"><img src="./assets/images/ad/price-list-ad.png" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div data-include="article-footer"></div>
+    <div class="footer-mobile-ad">
+        <a href="#_"><img src="assets/images/menu/ad-airbnb.png" class="img-fluid" alt="AIR BNB AD"></a>
+    </div>
+</body>
+<script src="assets/jquery.accordion-form.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="assets/rpie.js"></script>
+	  <script src="assets/index.js"></script>
+</html>

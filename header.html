@@ -1,0 +1,587 @@
+<script type="text/javascript">
+	/* System Menu Start */
+	$(".hamburger-show").click(function(){
+		$(".desktop-popup-menu").css({"display":"flex"});$('.desktop-popup-menu').toggleClass('popup-menu-open');
+		$(".hamburger-hide").css({"display":"inline"});$('.hamburger-show').hide(); 
+		$(".bl-header").addClass('bl-menu-active');
+		//$(".bl-logo-lg .bl-nav-item").css({"display":"none"});
+		
+		//$(".popup-menu-open .header-search").css({"display":"block"});
+	});
+	$(".hamburger-hide").click(function(){
+		$(".desktop-popup-menu").css({"display":"none"});
+		$('.desktop-popup-menu').toggleClass('popup-menu-open');
+		$(".hamburger-show").css({"display":"inline"});$('.hamburger-hide').hide(); 
+		$(".bl-header").removeClass('bl-menu-active');
+		//$(".bl-logo-lg .bl-nav-item").css({"display":"block"});
+	});
+	/* System Menu End */ 
+	$('.header-search #news').click(function () {
+		window.location.href = 'https://design.thehindu.co.in/BLRX/Search/V1/search.html'; 
+	});
+    /* Mobile Menu Start */
+	$(".hamburger-mobile-show").click(function(){
+		$("#navbarNavAltMarkup").toggle();
+		$("body").toggleClass("stop-scroll");
+		$("#header-bar-mobile").toggleClass("open-mob-menu");
+		$(".hamburger-mobile-hide").css({"display":"inline"});
+		$(".header-bar").css({"position":"sticky"});
+		$('.hamburger-mobile-show').hide();
+		$('.readinapp-mob').hide();
+		$('.secondary-menu .secondary-menu-list').hide();
+		$('.secondary-menu .col-4').addClass('col-12');
+		$('.secondary-menu .col-4 .loginlink-mob').show();
+		$('.menu-align-buttons-noclick').hide();$('.menu-align-buttons-onclick').show(); 
+		//$("#header-bar-mobile").css({"height":"200px"});  
+	});
+	$(".hamburger-mobile-hide").click(function(){
+		$(".header-bar").css({"position":"unset"});
+		$("#header-bar-mobile").toggleClass("open-mob-menu");
+		$("#navbarNavAltMarkup").toggle();
+		$("body").toggleClass("stop-scroll");
+		$('.readinapp-mob').show();
+		$('.secondary-menu .secondary-menu-list').show();
+		$('.secondary-menu .col-4').removeClass('col-12');
+		$('.secondary-menu .col-4 .loginlink-mob').hide();
+		$(".hamburger-mobile-show").css({"display":"inline"});$('.hamburger-mobile-hide').hide(); 
+		$('.menu-align-buttons-noclick').show();$('.menu-align-buttons-onclick').hide(); 
+		    if($('.menu-dropdown-list .title .menu-dropdown-heading').next('.menu-dropdown-sub-list').hasClass('opened')){ 
+				$('.menu-dropdown-list .title .menu-dropdown-heading').next('.menu-dropdown-sub-list').removeClass('opened');
+				$('.menu-dropdown-list .title .menu-dropdown-heading').removeClass("arrowactive");
+				$('.menu-dropdown-list .title').css({"background-color":"transparent"}); 
+			} 
+			if($('.mob-see-all').hasClass('opened')){ 
+				$('.mob-see-all').html('See All');$(".mob-see-all").css({"text-decoration":"none"});
+				$('.menu-see-less').toggleClass('hidden');$('.menu-see-all .last').toggleClass('uline');
+				$('.mob-see-all').toggleClass('opened');return false; 
+			}
+	});
+	/* Mobile Menu End */
+	    $('.menu-dropdown-list .title .menu-dropdown-heading .menu-arrow-mob').click(function(){ 
+			$('.menu-dropdown-list .title').css({"background-color":"transparent"});
+			if($(this).parent().next('.menu-dropdown-sub-list').hasClass('opened')){ 
+				$('.menu-dropdown-list .title .menu-dropdown-heading').toggleClass("active");
+				$('.menu-dropdown-list .title .menu-dropdown-heading').removeClass('arrowactive');
+				$(this).parent().next('.menu-dropdown-sub-list').removeClass('opened');
+				$(this).parent().find('.footer-arrow').toggleClass("active");
+				return false; 
+			}
+			else{
+				$('.menu-dropdown-list .title .footer-arrow').toggleClass("active");	
+			}
+			$('.menu-dropdown-list .title .menu-dropdown-sub-list').removeClass('opened');
+			$('.menu-dropdown-list .title .menu-dropdown-heading').removeClass('arrowactive');
+			$(this).parent().next('.menu-dropdown-sub-list').toggleClass('opened');
+			$(this).parent().toggleClass("arrowactive");
+			$('.arrowactive').parents(".title").css({"background-color":"#e7e7e7"});	
+		});
+		function serachmobile(val)
+	    {
+		   if(val=='News'){ window.location.href = 'https://design.thehindu.co.in/BLRX/Search/V1/search.html';  }
+	    }
+		$('.see-all-action').click(function(){ 
+			if($('.mob-see-all').hasClass('opened')){ 
+				$('.mob-see-all').html('See All');$(".mob-see-all").css({"text-decoration":"none"});
+				$('.menu-see-less').toggleClass('hidden');$('.menu-see-all .last').toggleClass('uline');
+				$('.mob-see-all').toggleClass('opened');return false; 
+			}
+			else{
+				$('.mob-see-all').html('See Less');$(".mob-see-all").css({"text-decoration":"underline"});
+				$('.menu-see-less').toggleClass('hidden');$('.menu-see-all .last').toggleClass('uline');
+				$('.mob-see-all').toggleClass('opened');return false; 
+			}
+		});
+		$('.header-btn-sect .btn-bl-subscribe').click(function(){ 
+			$('.bl-premium-user').show();$('.btn-bl-account-red').show();
+			$('.btn-bl-account').hide();$('.btn-bl-subscribe').hide();$('.btn-bl-login').hide();
+		});
+		$('.header-btn-sect .btn-bl-login').click(function(){ 
+			$('.bl-premium-user').hide();$('.btn-bl-account-red').hide();
+			$('.btn-bl-account').show();$('.btn-bl-subscribe').show();$('.btn-bl-login').hide();
+		});
+		$('.header-btn-sect .btn-bl-account-red').click(function(){ 
+			$('.bl-premium-user').hide();$('.btn-bl-account-red').hide();
+			$('.btn-bl-hide').show();$('.btn-bl-subscribe').show();$('.btn-bl-login').show();
+		});
+
+		$('.menu-align-buttons .btn-bl-subscribe').click(function(){ 
+			$('.btn-bl-readinapp-red').show();$('.btn-bl-account').hide();
+			$('.btn-bl-subscribe').hide();$('.btn-bl-signup').hide();
+			$('.readin-app-inner2').show();$('.readin-app-inner1').hide();
+			$('.readinapp-mob').hide();$('.bl-premium-inner3').show();
+			$('.bl-premium-inner4').show();$('.black-border-btn').show();
+			$('.red-btn').hide();$('.red-border-btn').hide();
+			$('.secondary-menu .secondary-menu-list').addClass('col-11');
+		});
+		$('.menu-align-buttons .btn-bl-readinapp-red').click(function(){ 
+			$('.btn-bl-readinapp-red').hide();$('.btn-bl-account').show();
+			$('.btn-bl-subscribe').show();$('.btn-bl-signup').hide();
+			$('.readin-app-inner2').hide();$('.readin-app-inner1').show();
+			$('.readinapp-mob').show();$('.bl-premium-inner3').hide();
+			$('.bl-premium-inner4').hide();$('.black-border-btn').show();$('.red-btn').show();$('.red-border-btn').hide();
+		    $('.secondary-menu .secondary-menu-list').removeClass('col-11');
+		});
+		$('.menu-align-buttons .btn-bl-signup').click(function(){ 
+			$('.btn-bl-readinapp-red').hide();$('.btn-bl-account').hide();
+			$('.btn-bl-subscribe').show();$('.btn-bl-signup').show();
+			$('.readin-app-inner2').hide();$('.readin-app-inner1').show();
+			$('.readinapp-mob').show();$('.bl-premium-inner3').hide();
+			$('.bl-premium-inner4').hide();$('.black-border-btn').hide();$('.red-btn').show();$('.red-border-btn').show();
+		    $('.secondary-menu .secondary-menu-list').removeClass('col-11');
+		});
+		$('.menu-align-buttons .btn-bl-account').click(function(){ 
+			$('.btn-bl-readinapp-red').hide();$('.btn-bl-account').hide();
+			$('.btn-bl-subscribe').show();$('.btn-bl-signup').show();
+			$('.readin-app-inner2').hide();$('.readin-app-inner1').show();
+			$('.readinapp-mob').show();$('.bl-premium-inner3').hide();
+			$('.bl-premium-inner4').hide();$('.black-border-btn').hide();$('.red-btn').show();$('.red-border-btn').show();
+		    $('.secondary-menu .secondary-menu-list').removeClass('col-11');
+		});
+</script>
+<header class="header bl-header hide-mobile" id="flux">
+	<div class="top-header-menu">
+		<div class="container">
+			<div class="navbar-collapse">
+				<div class="sys-noscroll">
+					<div class="row header-logo-cont">
+						<div class="bl-logo-lg">
+							<a href="#_"><img src="assets/images/menu/logo.svg" class="img-fluid" alt="businessline logo"></a>
+						    <ul class="bl-nav-item">
+								<li><a href="#_">Companies</a></li>
+								<li><a href="#_">Markets</a></li>
+								<li><a href="#_" class="active">Portfolio</a></li>
+								<li><a href="#_">Economy</a></li>
+								<li><a href="#_">Opinion</a></li>
+								<li><a href="#_" -class="active">Specials</a></li>
+							</ul>
+						</div>
+						<div class="header-btn-sect">
+							<!--<span class="subscribed-user">
+								<a href="#_"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>
+								<button type="button" class="btn btn-bl btn-bl-account-red">ACCOUNT <img src="assets/images/icon/men-icon-white.svg"></button>
+							</span>
+							<span class="registered-user">
+								<button type="button" class="btn btn-bl btn-bl-subscribe">SUBSCRIBE NOW</button>
+								<button type="button" class="btn btn-bl btn-bl-account">ACCOUNT <img src="assets/images/icon/men-icon.svg"></button>
+							</span>-->
+							<span class="new-user">
+								<!--<a href="#_" class="bl-premium-user"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>-->
+								<button type="button" class="btn btn-bl btn-bl-account-red">ACCOUNT <img src="assets/images/icon/men-icon-white.svg"></button>
+								<button type="button" class="btn btn-bl btn-bl-subscribe">SUBSCRIBE NOW</button>
+								<button type="button" class="btn btn-bl btn-bl-account">ACCOUNT <img src="assets/images/icon/men-icon.svg"></button>
+								<button type="button" class="btn btn-bl btn-bl-login">SIGN UP / LOGIN</button>	
+							</span>
+						</div>
+						<div class="menu-icon-sys">
+							<a class="hamburger-show" href="#" data-bs-toggle="dropdown">
+								<span class="menu-icon-text">MENU</span>
+								<img src="./assets/images/menu/menu-icon.svg">
+							</a>
+							<a class="hamburger-hide" href="#" data-bs-toggle="dropdown">
+								<span class="menu-icon-text">CLOSE</span>
+								<img src="./assets/images/menu/menu-close-icon.svg">
+							</a>
+						</div>
+						<a href="">
+							<div class="header-search">
+								<div class="search-text">SEARCH</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row desktop-popup-menu">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 position-relative">
+						<a href="">
+							<div class="header-search">
+								<div class="search-text">SEARCH</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+						<div class="row">
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+								<h5 class="header-top-border header-top-pix bottom-arrow-none"><a href="#_">Companies</a></h5>
+							    <h5 class="header-top-border header-top-pix second-header-pix"><a href="#_">Markets</a></h5>
+								<ul class="header-menu-list">
+									<li><a>Stocks</a></li>
+									<li><a>Forex</a></li>
+									<li><a>Commodities</a></li>
+									<li><a>Gold & Silver</a></li>
+									<li><a>Today's Pick</a></li>
+								</ul>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+								<h5 class="header-top-border header-top-pix"><a href="#_">Portfolio</a></h5>
+								<ul class="header-menu-list">
+									<li><a>Personal Finance</a></li>
+									<li><a>Big Story</a></li>
+									<li><a>Derivatives</a></li>
+									<li><a>Stock Fundamentals</a></li>
+									<li><a>Mutual Funds</a></li>
+									<li><a>Day trading guide</a></li>
+									<li><a>Portfolio Media</a></li>
+								</ul>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+								<h5 class="header-top-border header-top-pix"><a href="#_">Economy</a></h5>
+								<ul class="header-menu-list">
+									<li><a>Macro Economy</a></li>
+									<li><a>Policy</a></li>
+									<li><a>Agri Business</a></li>
+									<li><a>Logistics</a></li>
+									<li><a>Money & Banking</a></li>
+									<li><a>Budget 2022</a></li>
+									<li><a>Real State</a></li>
+								</ul>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+								<h5 class="header-top-border header-top-pix"><a href="#_">Opinion</a></h5>
+								<ul class="header-menu-list">
+									<li><a>Editorial</a></li>
+									<li><a>Columns</a></li>
+									<li><a>Quick Take</a></li>
+									<li><a>Letters</a></li>
+									<li><a>Books</a></li>
+									<li><a>Blogs</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+						<div class="row">	
+							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+								<h5 class="header-top-border header-top-pix"><a href="#_">Specials</a></h5>
+								<ul class="header-menu-list">
+									<li><a>Business Laws</a></li>
+									<li><a>Science and Technology</a></li>
+									<li><a>Corporate File</a></li>
+									<li><a>Auto focus</a></li>
+									<li><a>Clean Tech</a></li>
+									<li><a>Flight Plan</a></li>
+									<li><a>Pulse</a></li>
+									<li><a>Technophile</a></li>
+									<li><a>Marketingate File</a></li>
+								</ul>
+							</div>
+							<div class="col-xl-8 col-lg-8 col-md-8 col-sm-4 col-12 header-top-menu header-top-pix">
+								<div class="row">
+									<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+										<ul class="header-menu-list">
+											<li><a href="#_">News</a></li>
+											<li><a href="#_">BL Explainer</a></li>
+											<li><a href="#_">Info-Tech</a></li>
+											<li><a href="#_">BL on Campus</a></li>
+											<li><a href="#_">BL INK</a></li>
+											<li><a href="#_">Wealthckeck</a></li>
+											<li><a href="#_">Data Stories</a></li>
+											<li><a href="#_">Books</a></li>
+											<li><a href="#_">Marketing</a></li>
+											<li><a href="#_">Multimedia</a></li>
+											<li><a href="#_">Package</a></li>
+										</ul>
+									</div>
+									<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+										<ul class="header-menu-list">
+											<li><a href="#_">Latest News</a></li>
+											<li><a href="#_">Newsletters</a></li>
+											<li><a href="#_">Cartoons</a></li>
+											<li><a href="#_">Contact us</a></li>
+										</ul>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 header-social-link">
+						<div class="row">
+							<div class="col-xl-2 col-lg-3 col-md-2 col-sm-12 col-12">
+								<div class="app-icon">
+									<p>Get businessline apps on</p>
+									<a href="#_" title="Google Play"><img src="./assets/images/menu/google-playstore-icon.svg" class="img-responsive"></a>
+									<a href="#_" title="Apple Store"><img src="./assets/images/menu/apple-store-icon.svg" class="img-responsive"></a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-4 col-md-3 col-sm-12 col-12">
+								<p class="connect-us">Connect with us</p>
+						        <ul class="social-icons">
+							        <li><a href="#_" title="Facebook"><img src="./assets/images/icon/social-icon-fb.svg"></a></li>
+							        <li><a href="#_" title="Twitter"><img src="./assets/images/icon/social-icon-tw.svg"></a></li>
+							        <li><a href="#_" title="Instagram"><img src="./assets/images/icon/social-icon-insta.svg"></a></li>
+							        <li><a href="#_" title="Linkedin"><img src="./assets/images/icon/social-icon-linkedin.svg"></a></li>
+							        <li><a href="#_" title="Youtube"><img src="./assets/images/icon/social-icon-youtube.svg"></a></li>
+							        <li><a href="#_" title="Spotify"><img src="./assets/images/icon/social-icon-spotify.svg"></a></li>
+							        <li><a href="#_" title="Telegram"><img src="./assets/images/icon/social-icon-telegram.svg"></a></li>
+						        </ul>
+							</div>
+							<div class="col-xl-4 col-lg-5 col-md-4 col-sm-12 col-12">
+								<div class="header-link">
+									<a href="" class="daily-edition"><img src="./assets/images/icon/digital-access.svg"> <span class="text">Digital access to daily edition e-Paper<span class="slider"></span></span></a>
+									<a href="" class="newsletter"><img src="./assets/images/icon/newsletter.svg"> <span class="text">Subscribe to Newsletters<span class="slider"></span></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>   	
+		</div>
+	</div>	
+</header>
+<header class="header bl-header pt-2 pb-2" id="header-bar-mobile">
+	<div class="container">
+		<a href="#_"><img src="assets/images/menu/mobile-logo.svg" class="img-fluid mobile-logo" alt="The Hindu businessline Logo"></a>
+		<div class="menu-align-buttons">
+			<span class="menu-align-buttons-noclick">
+				<!--Subscribed User Start-->
+				    <!--
+				    <span><button type="button" class="btn btn-bl btn-bl-readinapp-red">READ IN APP</button></span>
+				    -->
+				<!--Subscribed User End-->
+				<!--Registered User Start-->
+				    <!--
+				    <span><button type="button" class="btn btn-bl btn-bl-subscribe">SUBSCRIBE</button></span>
+					<span><button type="button" class="btn btn-bl btn-bl-account">ACCOUNT <img src="assets/images/icon/men-icon.svg"></button></span>
+				    -->
+				<!--Registered User End-->
+				<!--New User Start-->
+				
+				    <button type="button" class="btn btn-bl btn-bl-readinapp-red">READ IN APP</button>
+					<a href="#_" class="bl-premium-inner3"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>
+				    <button type="button" class="btn btn-bl btn-bl-account">ACCOUNT <img src="assets/images/icon/men-icon.svg"></button>
+				    <button type="button" class="btn btn-bl btn-bl-subscribe">SUBSCRIBE</button>
+				    <button type="button" class="btn btn-bl btn-bl-signup">Sign Up / Login</button>
+				    
+				<!--New User End-->
+			</span>
+			<span class="menu-align-buttons-onclick">
+				<!--Registered / New User Start-->
+				    
+				    <!--<button type="button" class="btn btn-bl btn-bl-readinapp">READ IN APP</button>-->
+					
+				<!--Registered / New User End-->
+				<!--Subscribed User Start-->
+				    <!--
+				    <button type="button" class="btn btn-bl btn-bl-readinapp-red">READ IN APP</button>
+					-->
+				<!--Subscribed User End-->
+				<button type="button" class="btn btn-bl btn-bl-readinapp readin-app-inner1">READ IN APP</button>
+				<button type="button" class="btn btn-bl btn-bl-readinapp-red readin-app-inner2">READ IN APP</button>
+			</span>
+			
+			<a class="hamburger-mobile-show" href="#" data-bs-toggle="dropdown">
+				<span class="menu-hamburger"><img src="assets/images/menu/menu-icon.svg"></span>
+			</a>
+			<a class="hamburger-mobile-hide" href="#" data-bs-toggle="dropdown">
+				<span class="menu-hamburger"><img src="assets/images/menu/menu-close-icon.svg"></span>
+			</a>
+			
+		</div>
+		<div class="row secondary-menu">
+			<div class="col-8 secondary-menu-list">
+				<ul class="bl-nav-item">
+					<li><a href="#_">Companies</a></li>
+					<li><a href="#_">Markets</a></li>
+					<li><a href="#_">Portfolio</a></li>
+					<li><a href="#_">Economy</a></li>
+					<li><a href="#_">Opinion</a></li>
+					<li><a href="#_">Specials</a></li>
+				</ul>	
+			</div>
+			<div class="col-4">
+				<!--Registered / New User Start-->
+					<!--<div class="readinapp-mob">READ IN APP</div>-->
+				<!--Registered / New User End-->
+				<!--Subscribed User Start-->
+				    <!--
+				    <a href="#_"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>
+				    -->
+				<!--Subscribed User End-->
+				<div class="readinapp-mob">READ IN APP</div>
+				<div class="loginlink-mob">
+					<a class="loginbtn" href="https://www.thehindubusinessline.com/signin/">LOGIN</a>
+					<span>|</span>
+					<a class="loginbtn" href="https://www.thehindubusinessline.com/signin/">SIGN UP</a>
+				</div>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse mobile-menu-container" id="navbarNavAltMarkup">
+			<div class="navbar-nav me-auto">
+				<div class="button-section">
+					<p>TO ENJOY ADDITIONAL BENEFITS</p>
+					<!--Subscribed User Start-->
+					    <!--
+					    <a href="#_"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>
+					    <button class="menu-btn black-border-btn" href="#">ACCOUNT <img src="assets/images/icon/men-icon-white.svg"></button>
+					    -->
+					<!--Subscribed User End-->
+					<!--Registered User Start-->
+					    <!--
+					    <button class="menu-btn red-btn" href="#">SUBSCRIBE</button>
+					    <button class="menu-btn black-border-btn" href="#">ACCOUNT <img src="assets/images/icon/men-icon-white.svg"></button>
+					    -->
+					<!--Registered User End-->
+					<!--New User Start-->
+					    <!--<button class="menu-btn red-btn" href="#">SUBSCRIBE</button>
+					    <button class="menu-btn red-border-btn" href="#">SIGN-UP / LOGIN</button>	-->
+					<!--New User End-->
+					<a href="#_" class="bl-premium-inner4"><img src="assets/images/icon/bl-premium.svg" class="img-blpremium-btn"></a>
+					<button class="menu-btn black-border-btn" href="#">ACCOUNT <img src="assets/images/icon/men-icon-white.svg"></button>
+					<button class="menu-btn red-btn" href="#">SUBSCRIBE</button>
+					<button class="menu-btn red-border-btn" href="https://www.thehindubusinessline.com/signup/">TRY FREE TRIAL</button>	
+				</div>	
+				<div class="row mobile-search">
+					<a href="">
+						<div class="custom-search">
+							<div class="search-text">SEARCH</div>
+						</div>
+					</a>
+				</div>
+				<div class="menu-section">
+					<ul class="menu-dropdown-list">
+						<li class="title">
+							<h5 class="menu-dropdown-heading">Companies</h5>	
+						</li>
+						<li class="title">
+							<h5 class="menu-dropdown-heading">
+								<a href="https://www.thehindubusinessline.com/markets/">Markets</a>
+								<span class="menu-arrow-mob"></span>
+							</h5>
+							<ul class="menu-dropdown-sub-list">
+								<li><a href>Stocks</a></li>
+								<li><a href>Forex</a></li>
+								<li><a href>Commodities</a></li>
+								<li><a href>Gold & Silver</a></li>
+								<li><a href>Today's Pick</a></li>
+							</ul>
+						</li>
+						<li class="title">
+							<h5 class="menu-dropdown-heading">
+								<a href="https://www.thehindubusinessline.com/portfolio/">Portfolio</a>
+								<span class="menu-arrow-mob"></span>
+							</h5>
+							<ul class="menu-dropdown-sub-list">
+								<li><a href>Personal Finance</a></li>
+								<li><a href>Big Story</a></li>
+								<li><a href>Derivatives</a></li>
+								<li><a href>Stock Fundamentals</a></li>
+								<li><a href>Mutual Funds</a></li>
+								<li><a href>Day trading guide</a></li>
+								<li><a href>Portfolio Media</a></li>
+							</ul>
+						</li>
+						<li class="title">
+							<h5 class="menu-dropdown-heading">
+								<a href="https://www.thehindubusinessline.com/economy/">Economy</a>
+								<span class="menu-arrow-mob"></span>
+							</h5>
+							<ul class="menu-dropdown-sub-list">
+								<li><a href>Macro Economy</a></li>
+								<li><a href>Policy</a></li>
+								<li><a href>Agri Business</a></li>
+								<li><a href>Logistics</a></li>
+								<li><a href>Money & Banking</a></li>
+								<li><a href>Budget 2022</a></li>
+								<li><a href>Real State</a></li>
+							</ul>
+						</li>
+						<li class="title">
+							<h5 class="menu-dropdown-heading">
+								<a href="https://www.thehindubusinessline.com/opinion/">Opinion</a>
+								<span class="menu-arrow-mob"></span>
+							</h5>
+							<ul class="menu-dropdown-sub-list">
+								<li><a href>Editorial</a></li>
+								<li><a href>Columns</a></li>
+								<li><a href>Quick Take</a></li>
+								<li><a href>Letters</a></li>
+								<li><a href>Books</a></li>
+								<li><a href>Blogs</a></li>
+							</ul>
+						</li>
+						<li class="title">
+							<h5 class="menu-dropdown-heading">
+								<a href="https://www.thehindubusinessline.com/markets/">Specials</a>
+								<span class="menu-arrow-mob"></span>
+							</h5>
+							<ul class="menu-dropdown-sub-list">
+								<li><a href>Business Laws</a></li>
+								<li><a href>Science and Technology</a></li>
+								<li><a href>Corporate File</a></li>
+								<li><a href>Auto focus</a></li>
+								<li><a href>Clean Tech</a></li>
+								<li><a href>Flight Plan</a></li>
+								<li><a href>Pulse</a></li>
+								<li><a href>Technophile</a></li>
+								<li><a href>Marketing</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+					<div class="fixed-menu">
+						<ul class="menu-list menu-see-all">
+							<li class="uline"><a href="#">News </a></li>
+							<li class="uline"><a href="#">BL Explainer</a></li>
+							<li class="uline"><a href="#">Info-Tech</a></li>
+							<li class="uline"><a href="#">BL On Campus</a></li>
+							<li class="last"><a href="#">BL INK</a></li>
+							<li class="last see-all-action"><a href="#"><span class="mob-see-all">See All</span></a></li>
+						</ul>
+						<ul class="menu-list menu-see-less hidden">
+							<li class="uline"><a href="#">Wealthcheck</a></li>
+							<li class="uline"><a href="#">Data Stories</a></li>
+							<li class="uline"><a href="#">Books</a></li>
+							<li class="uline"><a href="#">Marketing</a></li>
+							<li class="uline"><a href="#">Multimedia</a></li>
+							<li class="uline"><a href="#">Package</a></li>
+							<li class="uline"><a href="#">Latest News</a></li>
+							<li class="uline"><a href="#">Newsletter</a></li>
+							<li class="uline"><a href="#">Cartoons</a></li>
+							<li class="uline"><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-top-stories-mobile">
+					<div class="header-link">
+						<a href="#_" class="daily-edition"><img src="./assets/images/icon/digital-access.svg"> Digital access to daily edition e-Paper</a>
+						<a href="#_" class="newsletter"><img src="./assets/images/icon/newsletter.svg"> Subscribe to Newsletters</a>
+					</div>
+				</div>
+				<div class="menu-section">
+					<div class="fixed-menu">
+						<ul class="menu-list">
+							<li><a href="#">Account Settings</a></li>
+							<li><a href="#">Notifications</a><span class="count">14</span></li>
+							<!--<li class="uline"><a href="#">Personalize </a></li>
+							<li><a href="#">App Settings</a></li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="button-section">
+					<p class="connect-us">Connect With Us</p>
+					<ul class="social-icons-mobile">
+						<li><a href="#_" title="Facebook"><img src="./assets/images/icon/social-icon-fb.svg"></a></li>
+						<li><a href="#_" title="Twitter"><img src="./assets/images/icon/social-icon-tw.svg"></a></li>
+						<li><a href="#_" title="Instagram"><img src="./assets/images/icon/social-icon-insta.svg"></a></li>
+						<li><a href="#_" title="Linkedin"><img src="./assets/images/icon/social-icon-linkedin.svg"></a></li>
+						<li><a href="#_" title="Youtube"><img src="./assets/images/icon/social-icon-youtube.svg"></a></li>
+						<li><a href="#_" title="Spotify"><img src="./assets/images/icon/social-icon-spotify.svg"></a></li>
+						<li><a href="#_" title="Telegram"><img src="./assets/images/icon/social-icon-telegram.svg"></a></li>
+					</ul>
+					<div class="row app-icon">
+						<p class="business-line">Get BusinessLine apps on</p>
+						<div class="col-6">
+							<a href="#" title="Google Play"><img src="assets/images/menu/google-playstore-icon.svg" class="img-responsive"></a>
+						</div>
+						<div class="col-6">
+							<a href="#" title="Apple Store"><img src="assets/images/menu/apple-store-icon.svg" class="img-responsive"></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>		 
+	</div>
+</header>
+		
+		
+	

@@ -1,0 +1,160 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.footer-list .title h5').click(function(){ 
+            if($(this).next('.footer-sub-list').hasClass('opened')){ 
+                $('.footer-list .title h5').toggleClass("active");
+                $('.footer-list .title h5').removeClass('arrowactive');
+                $(this).next('.footer-sub-list').removeClass('opened');
+                $(this).find('.footer-arrow').toggleClass("active");
+                return false; 
+            }
+            else{
+                $('.footer-list .title .footer-arrow').toggleClass("active"); 
+            }
+            $('.footer-list .title .footer-sub-list').removeClass('opened');
+            $('.footer-list .title h5').removeClass('arrowactive');
+            $(this).next('.footer-sub-list').toggleClass('opened');
+            $(this).toggleClass("arrowactive");   
+        });
+        $(".back-to-top").click(function () {
+            $("html, body").animate({scrollTop: 0}, 100);
+        });
+    });
+</script>    
+<footer>
+    <div class="container">
+        <div class="row footer-logo">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12">
+                <a href="#_"><img src="assets/images/menu/logo.svg" class="img-fluid mobile-logo" alt="The Hindu businessline Logo"></a>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12">
+                <div class="app-icon">
+                    <a href="#_" title="Google Play"><img src="./assets/images/menu/google-playstore-icon.svg"></a>
+                    <a href="#_" title="Apple Store"><img src="./assets/images/menu/apple-store-icon.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-menu">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-12 col-12">
+                <ul class="footer-list">
+                    <li class="title">
+                        <h5><span class="footer-arrow">The Hindu businessline</span></h5>
+                        <ul class="footer-sub-list">
+                            <li><a href="#_">About Us</a></li>
+                            <li><a href="#_">News Archive</a></li>
+                            <li><a href="#_">Site map</a></li>
+                            <li><a href="#_">Print Subscription</a></li>
+                            <li><a href="#_">Digital Subscription</a></li>
+                            <li><a href="#_">Newsletters</a></li>
+                            <li><a href="#_">RSS feeds</a></li>
+                        </ul>
+                    </li>
+                    <li class="title mt-4">
+                        <h5 class="no-border"><span class="footer-arrow">Contact us</span></h5>
+                        <ul class="footer-sub-list">
+                            <li><a href="#_">Newsroom</a></li>
+                            <li><a href="#_">Customer care</a></li>
+                            <li><a href="#_">Advertisement</a></li>
+                            <li><a href="#_">Licensing & Syndication</a></li>
+                            <li><a href="#_">Careers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2 col-sm-2 col-12">
+                <ul class="footer-list">
+                    <li class="title">
+                        <h5><span class="footer-arrow">Group News Sites</span></h5>
+                        <ul class="footer-sub-list">
+                            <li><a href="#_">The Hindu</a></li>
+                            <li><a href="#_">BL on Campus</a></li>
+                            <li><a href="#_">Sporstar</a></li>
+                            <li><a href="#_">Businessline</a></li>
+                            <li><a href="#_" class="footer-menu-olan">இந்து தமிழ் திசை</a></li>
+                            <li><a href="#_">The Hindu Centre</a></li>
+                            <li><a href="#_">Young World Club</a></li>
+                            <li><a href="#_">The Hindu ePaper</a></li>
+                            <li><a href="#_">Business Line ePaper</a></li>
+                            <li><a href="#_">Crossword + Free Games</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2 col-sm-2 col-12">
+                <ul class="footer-list">
+                    <li class="title">
+                        <h5><span class="footer-arrow">Other Products</span></h5>
+                        <ul class="footer-sub-list">
+                            <li><a href="#_">RoofandFloor</a></li>
+                            <li><a href="#_">STEP</a></li>
+                            <li><a href="#_">Images</a></li>
+                            <li><a href="#_">Classifieds</a></li>
+                            <li><a href="#_">Special Publications</a></li>
+                            <li><a href="#_">eBooks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2 col-sm-2 col-12">
+                <ul class="footer-list">
+                    <li class="title">
+                        <h5><span class="footer-arrow">Popular Sections</span></h5>
+                        <ul class="footer-sub-list">
+                            <li><a href="#_">Companies</a></li>
+                            <li><a href="#_">Markets</a></li>
+                            <li><a href="#_">Economy</a></li>
+                            <li><a href="#_">Specials</a></li>
+                            <li><a href="#_">Portfolio</a></li>
+                            <li><a href="#_">Resources</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 col-12 mobile-footer-pad">
+                <h5 class="footer-top-border">Trending on The Hindu businessline</h5>
+                <ul class="footer-menu-list">
+                    <li><a href="#_">India Squad for Ireland T20 2022 <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">International Yoga Day <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">Upcoming Movie Releases <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">Pankaj Tripathi Favourite Food <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">Nayanthara Honeymoon Pictures <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                </ul>    
+                <h5 class="no-border">Trending on our Group sites</h5>
+                <ul class="footer-menu-list">
+                    <li><a href="#_">International Yoga Day 2022 <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">National Herald Case <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">JAC 12th Result 2022 <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">JEE Main Admit Card 2022 <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                    <li><a href="#_">Sensex Today <span><img src="assets/images/icon/graph-arrow-icon.svg" alt=""></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-xl-12 col-md-12  col-sm-12 col-xs-12 col-12">
+                <ul class="footer-social-icon">
+                    <li><a href="#_" title="Facebook"><img src="./assets/images/icon/social-icon-fb.svg"></a></li>
+					<li><a href="#_" title="Twitter"><img src="./assets/images/icon/social-icon-tw.svg"></a></li>
+					<li><a href="#_" title="Instagram"><img src="./assets/images/icon/social-icon-insta.svg"></a></li>
+					<li><a href="#_" title="Linkedin"><img src="./assets/images/icon/social-icon-linkedin.svg"></a></li>
+					<li><a href="#_" title="Youtube"><img src="./assets/images/icon/social-icon-youtube.svg"></a></li>
+					<li><a href="#_" title="Spotify"><img src="./assets/images/icon/social-icon-spotify.svg"></a></li>
+					<li><a href="#_" title="Telegram"><img src="./assets/images/icon/social-icon-telegram.svg"></a></li>
+				</ul>
+                <ul class="link-list">
+                    <li><a href="#_">Privacy settings</a></li>
+                    <li><a href="#_">Privacy policy</a></li>
+                    <li><a href="#_">Cookie policy</a></li>
+                    <li><a href="#_">Terms & conditions</a></li>
+                </ul>
+                <div class="copyrights">
+                    Copyright© 2022, THG PUBLISHING PVT LTD. or its affiliated companies. All rights reserved.
+                </div>
+                <div class="back-to-top">
+                    <p>BACK TO TOP<img src="./assets/images/menu/back-to-top-arrow.svg"></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+      
+</footer>
